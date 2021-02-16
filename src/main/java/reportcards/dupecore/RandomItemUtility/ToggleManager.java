@@ -1,6 +1,7 @@
 package reportcards.dupecore.RandomItemUtility;
 
 
+import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 
@@ -9,7 +10,7 @@ import java.util.HashMap;
 public class ToggleManager {
 
     Plugin plugin;
-    public HashMap<Player, Boolean> randomItemToggleList = new HashMap<>();
+    public HashMap<Player, Boolean> randomItemToggleList = new HashMap<Player, Boolean>();
 
     public ToggleManager(Plugin plugin) {
         this.plugin = plugin;

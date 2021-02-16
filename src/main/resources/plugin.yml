@@ -7,8 +7,6 @@ authors: [ ReportCards, Reassembly ]
 description: Duplicate your items!
 commands:
   dupe:
-    description: WOW COMMAND POG
-  test:
-    description: WOW COMMAND POG
+    description: Duplicate your held item!
   toggleitems:
     description: Toggle the random items!

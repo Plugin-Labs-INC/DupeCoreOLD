@@ -4,13 +4,14 @@
 # Main Plugin Configuration
 pluginPrefix: "&9[&bDupeCore&9]" # Prefix behind plugin messages
 
+# Plugin Messages
+dupeMessage: "&3The item you were holding was duplicated!" # The message when someone duplicates an item
+dupeNoItemMessage: "&3You're not holding an item to duplicate" # Message when someone tries to duplicate air
+toggleRandomItemOn: "&3You have enabled random items!" # Message when the player turns on random
+toggleRandomItemOff: "&3You have disabled random items!" # Message when the player turns off random items
+inventoryFullMessage: "&cYour inventory is full! You can't get random items!" # Action bar when inventory is full and an random item is given
+
 # Dupe Configuration
-
-# The message when someone duplicates an item
-dupeMessage: "&3The item you were holding was duplicated!"
-
-# Message when someone tries to duplicate air
-dupeNoItemMessage: "&3You're not holding an item to duplicate"
 
 # Items that are blocked from being duplicated, use material names from (https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html)
 blockedDupeItems:
@@ -21,10 +22,12 @@ blockedDupeItems:
 
 # Enable players receiving random items
 doRandomItems: true
-
 # Time between each random item (In seconds)
 randomItemInterval: 10
-
+# Whether or not to give everybody the same random item each time. (Random each activation, but everyone gets the same item)
+giveSameRandomItem: false
+# Send an action bar if a players inventory is full
+inventoryFullNotification: true
 # Items that are blocked from being obtained from random item generation. (Uses material names)
 blockedRandomItems:
   - "BEDROCK"

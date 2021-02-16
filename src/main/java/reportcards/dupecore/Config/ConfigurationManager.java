@@ -56,6 +56,17 @@ public class ConfigurationManager {
         return returnValue;
     }
 
+    public Double getConfigDouble(String value) {
+        Double returnValue;
+        try{
+            returnValue = config.getDouble(value);
+        }catch(Exception e){
+            returnValue = null;
+        }
+
+        return returnValue;
+    }
+
     public List getConfigList(String value) {
         List returnValue;
         try{
