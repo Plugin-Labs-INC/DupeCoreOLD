@@ -14,8 +14,8 @@ dupeNoItemMessage: "You're not holding an item to duplicate"
 
 # Items that are blocked from being duplicated, use material names from (https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html)
 blockedDupeItems:
-  - BEDROCK
-  - BARRIER
+  - "BEDROCK"
+  - "BARRIER"
 
 # Random Item Generation
 
@@ -27,8 +27,8 @@ randomItemInterval: 10
 
 # Items that are blocked from being obtained from random item generation. (Uses material names)
 blockedRandomItems:
-  - BEDROCK
-  - BARRIER
+  - "BEDROCK"
+  - "BARRIER"
 
 
 # Misc Configuration

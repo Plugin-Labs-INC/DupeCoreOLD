@@ -25,17 +25,17 @@ public class CommandDupe implements CommandExecutor {
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] args) {
         Player player = (Player) commandSender;
         ItemStack heldItem = player.getInventory().getItemInMainHand();
-        if (heldItem.equals(Material.AIR)) {
+        if (heldItem.getType().equals(Material.AIR)) {
             player.sendMessage(ChatColor.RED + "You cannot dupe air! Hold an item in your hand to dupe it!");
             return false;
         }
 
-        if (configurationManager.getConfigList("blockedDupeItems").contains(heldItem.getType())) {
+        if (configurationManager.getConfigList("blockedDupeItems").contains(String.valueOf(heldItem.getType()))) {
             player.sendMessage(ChatColor.RED + "This item has been blocked by a server administrator, if you think this is a mistake, ask an admin to remove it!");
             return false;
         }
         player.getInventory().addItem(heldItem);
-        player.sendMessage(ChatColor.translateAlternateColorCodes('&', configurationManager.getConfigString("prefix") + configurationManager.getConfigString("dupeMessage")));
+        player.sendMessage(ChatColor.translateAlternateColorCodes('&', configurationManager.getConfigString("pluginPrefix") + " &f" + configurationManager.getConfigString("dupeMessage")));
 
         return true;
     }
