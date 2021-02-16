@@ -25,10 +25,6 @@ public class ConfigurationManager {
         saveConfig();
     }
 
-    public List getConfigList(String list) {
-        return config.getList(list);
-    }
-
     public void saveConfig() {
         try {
             plugin.saveConfig();
@@ -44,5 +40,9 @@ public class ConfigurationManager {
 
     public String getConfigString(String value) {
         return config.getString(value);
+    }
+
+    public List getConfigList(String value) {
+        return config.getList(value);
     }
 }
