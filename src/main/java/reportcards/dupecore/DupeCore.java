@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 import reportcards.dupecore.Commands.CommandDupe;
+import reportcards.dupecore.Commands.CommandTestRandomItem;
 import reportcards.dupecore.Config.ConfigurationManager;
 import reportcards.dupecore.Listeners.PlayerInteractListener;
 
@@ -16,7 +17,7 @@ public final class DupeCore extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        int max = 3; // Max for the iteration function on startup
+        int max = 4; // Max for the iteration function on startup
         // Plugin startup logic
         log(iteration("Startup", max) + " &eStarting config manager");
         configurationManager = new ConfigurationManager(this);
@@ -25,6 +26,10 @@ public final class DupeCore extends JavaPlugin {
         //Initialize commands
         log(iteration("Startup", max) + " &eInitalizing commands");
         this.getCommand("dupe").setExecutor(new CommandDupe(this, configurationManager));
+        this.getCommand("test").setExecutor(new CommandTestRandomItem(this, configurationManager));
+
+        //Register events
+        log(iteration("Startup", max) + " &eRegistering events");
         this.getServer().getPluginManager().registerEvents(new PlayerInteractListener(this, configurationManager), this);
 
         //Done

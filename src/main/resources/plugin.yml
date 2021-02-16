@@ -8,3 +8,5 @@ description: Duplicate your items!
 commands:
   dupe:
     description: WOW COMMAND POG
+  test:
+    description: WOW COMMAND POG

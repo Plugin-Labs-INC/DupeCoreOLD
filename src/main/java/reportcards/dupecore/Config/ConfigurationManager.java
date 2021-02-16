@@ -35,14 +35,35 @@ public class ConfigurationManager {
     }
 
     public Boolean getConfigBoolean(String value) {
-        return config.getBoolean(value);
+        Boolean returnValue;
+        try{
+            returnValue = config.getBoolean(value);
+        }catch(Exception e){
+            returnValue = null;
+        }
+
+        return returnValue;
     }
 
     public String getConfigString(String value) {
-        return config.getString(value);
+        String returnValue;
+        try{
+            returnValue = config.getString(value);
+        }catch(Exception e){
+            returnValue = null;
+        }
+
+        return returnValue;
     }
 
     public List getConfigList(String value) {
-        return config.getList(value);
+        List returnValue;
+        try{
+            returnValue = config.getList(value);
+        }catch(Exception e){
+            returnValue = null;
+        }
+
+        return returnValue;
     }
 }

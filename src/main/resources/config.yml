@@ -7,10 +7,10 @@ pluginPrefix: "&9[&bDupeCore&9]" # Prefix behind plugin messages
 # Dupe Configuration
 
 # The message when someone duplicates an item
-dupeMessage: "The item you were holding was duplicated!"
+dupeMessage: "&3The item you were holding was duplicated!"
 
 # Message when someone tries to duplicate air
-dupeNoItemMessage: "You're not holding an item to duplicate"
+dupeNoItemMessage: "&3You're not holding an item to duplicate"
 
 # Items that are blocked from being duplicated, use material names from (https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html)
 blockedDupeItems:
@@ -29,6 +29,10 @@ randomItemInterval: 10
 blockedRandomItems:
   - "BEDROCK"
   - "BARRIER"
+  - "JIGSAW"
+  - "COMMAND_BLOCK"
+  - "REPEATING_COMMAND_BLOCK"
+  - "CHAIN_COMMAND_BLOCK"
 
 
 # Misc Configuration

@@ -25,7 +25,7 @@ public class PlayerInteractListener implements Listener {
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent event) {
         Player player = event.getPlayer();
-        if (player.getGameMode() != GameMode.CREATIVE || !player.isOp() || configurationManager.getConfigBoolean("disableSpawnEggs")) {
+        if ((player.getGameMode() != GameMode.CREATIVE && !player.isOp()) && configurationManager.getConfigBoolean("disableSpawnEggs")) {
             if (String.valueOf(event.getItem().getType()).contains("SPAWN_EGG")) {
                 event.setCancelled(true);
                 player.sendMessage(ChatColor.RED + "The server administrators have disabled spawn eggs!");

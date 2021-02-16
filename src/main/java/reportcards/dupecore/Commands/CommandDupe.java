@@ -35,7 +35,7 @@ public class CommandDupe implements CommandExecutor {
             return false;
         }
         player.getInventory().addItem(heldItem);
-        player.sendMessage(ChatColor.translateAlternateColorCodes('&', configurationManager.getConfigString("pluginPrefix") + " &f" + configurationManager.getConfigString("dupeMessage")));
+        player.sendMessage(ChatColor.translateAlternateColorCodes('&', configurationManager.getConfigString("pluginPrefix") + " &r" + configurationManager.getConfigString("dupeMessage")));
 
         return true;
     }
