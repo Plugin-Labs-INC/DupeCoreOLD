@@ -21,7 +21,6 @@ public class CommandDupe implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] args) {
         Player player = (Player) commandSender;
-        //player.getInventory().getItemInMainHand()
         ItemStack heldItem = player.getInventory().getItemInMainHand();
         if (heldItem.equals(Material.AIR)) {
             player.sendMessage(ChatColor.RED + "You cannot dupe air! Hold an item in your hand to dupe it!");
