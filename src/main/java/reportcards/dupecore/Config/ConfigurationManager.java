@@ -34,8 +34,8 @@ public class ConfigurationManager {
         }
     }
 
-    public Object getConfigObject(String value) {
-        return config.get(value);
+    public Boolean getConfigBoolean(String value) {
+        return config.getBoolean(value);
     }
 
     public String getConfigString(String value) {

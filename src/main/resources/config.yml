@@ -30,5 +30,12 @@ blockedRandomItems:
   - BEDROCK
   - BARRIER
 
+
+# Misc Configuration
+
+# Blocks spawn eggs from being used, if the value is "true", spawn eggs CANNOT be placed, keep in mind any player with OP or in creative mode will ALWAYS be able to place spawn eggs.
+disableSpawnEggs: true
+
+
 # Want to suggest things or report bugs? Go to our Github!
 # https://github.com/ReportCardsMC/DupeCore
