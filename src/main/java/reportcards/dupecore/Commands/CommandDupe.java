@@ -9,13 +9,16 @@ import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.Plugin;
+import reportcards.dupecore.Config.ConfigurationManager;
 
 public class CommandDupe implements CommandExecutor {
 
     public Plugin plugin;
+    private ConfigurationManager configurationManager;
 
-    public CommandDupe(Plugin plugin) {
+    public CommandDupe(Plugin plugin, ConfigurationManager configurationManager) {
         this.plugin = plugin;
+        this.configurationManager = configurationManager;
     }
 
     @Override
@@ -27,7 +30,7 @@ public class CommandDupe implements CommandExecutor {
             return false;
         }
         player.getInventory().addItem(heldItem);
-
+        player.sendMessage(ChatColor.translateAlternateColorCodes('&', configurationManager.getConfigString("prefix") + configurationManager.getConfigString("dupeMessage")));
 
         return true;
     }

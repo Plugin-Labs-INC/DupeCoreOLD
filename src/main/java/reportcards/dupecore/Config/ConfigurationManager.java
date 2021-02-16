@@ -38,4 +38,11 @@ public class ConfigurationManager {
         }
     }
 
+    public Object getConfigObject(String value) {
+        return config.get(value);
+    }
+
+    public String getConfigString(String value) {
+        return config.getString(value);
+    }
 }
