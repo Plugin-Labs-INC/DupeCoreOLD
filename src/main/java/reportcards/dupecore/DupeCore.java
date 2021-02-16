@@ -26,6 +26,8 @@ public final class DupeCore extends JavaPlugin {
         log(iteration("startup", max) + " &eInitalizing commands");
         this.getCommand("dupe").setExecutor(new CommandDupe(this));
 
+        log("GAY")
+
         //Done
         log(iteration("startup", max) + " &aPlugin started completely");
     }
