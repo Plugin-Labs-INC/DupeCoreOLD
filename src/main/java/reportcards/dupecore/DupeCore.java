@@ -42,7 +42,7 @@ public final class DupeCore extends JavaPlugin {
         log(iteration("Startup", max) + " &eInitalizing commands");
         this.getCommand("dupe").setExecutor(new CommandDupe(this, configurationManager));
         this.getCommand("toggleitems").setExecutor(new CommandToggleRandomItems(this, toggleManager, configurationManager));
-        this.getCommand("dupecore").setExecutor(new CommandDupeCore(this, configurationManager));
+        this.getCommand("dupecore").setExecutor(new CommandDupeCore(this, configurationManager, randomItems));
 
         //Register events
         log(iteration("Startup", max) + " &eRegistering events");

@@ -16,6 +16,10 @@ public class ConfigurationManager {
         config = this.plugin.getConfig();
     }
 
+    public void getNewConfig() {
+        config = plugin.getConfig();
+    }
+
     public void setDefaults() {
         plugin.saveDefaultConfig();
     }

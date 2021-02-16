@@ -68,7 +68,11 @@ public class RandomItems {
             public void run() {
                tick++;
 
-               if (tick % 20 == 0) if (serverLoopID != id) this.cancel();
+               if (tick % 20 == 0) {
+                   if (serverLoopID != id) this.cancel();
+                   Bukkit.broadcastMessage(configurationManager.getConfigBoolean("doRandomItems") + " | ");
+                   if (!configurationManager.getConfigBoolean("doRandomItems")) this.cancel();
+               }
                if (tick % 3 == 0) {
                    long timeDifference = new Date().getTime() - lastUnixTime;
                    if (timeDifference >= configurationManager.getConfigDouble("randomItemInterval") * 1000) {
