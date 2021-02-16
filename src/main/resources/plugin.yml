@@ -1,0 +1,7 @@
+name: DupeCore
+version: ${project.version}
+main: reportcards.dupecore.DupeCore
+api-version: 1.16
+prefix: DupeCore
+authors: [ ReportCards, Reassembly ]
+description: Duplicate your items!
