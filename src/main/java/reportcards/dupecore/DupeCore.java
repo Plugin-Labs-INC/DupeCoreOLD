@@ -10,26 +10,23 @@ import java.util.HashMap;
 
 public final class DupeCore extends JavaPlugin {
 
-    private HashMap<String, Integer> iterationList = new HashMap<String, Integer>();
+    HashMap<String, Long> iterationList = new HashMap<String, Long>();
     private ConfigurationManager configurationManager;
 
     @Override
     public void onEnable() {
         int max = 3; // Max for the iteration function on startup
-
         // Plugin startup logic
-        log(iteration("startup", max) + " &eStarting config manager");
+        log(iteration("Startup", max) + " &eStarting config manager");
         configurationManager = new ConfigurationManager(this);
         configurationManager.setDefaults();
 
         //Initialize commands
-        log(iteration("startup", max) + " &eInitalizing commands");
+        log(iteration("Startup", max) + " &eInitalizing commands");
         this.getCommand("dupe").setExecutor(new CommandDupe(this));
 
-        log("GAY")
-
         //Done
-        log(iteration("startup", max) + " &aPlugin started completely");
+        log(iteration("Startup", max) + " &aPlugin started completely");
     }
 
     @Override
@@ -37,11 +34,15 @@ public final class DupeCore extends JavaPlugin {
         // Plugin shutdown logic
     }
 
-    private String iteration(String id, int max) {
-        if (!iterationList.containsKey(id)) iterationList.put(id, 1);
-        String returnString = "&7[&f" + iterationList.get(id) + "&7/&f" + max + "&7]";
-        iterationList.put(id, iterationList.get("id") + 1);
-        return null;
+    private String iteration(String id, long max) {
+        if (!iterationList.containsKey(id)) iterationList.put(id, (long) 1);
+        String returnString = "&9[&b" + iterationList.get(id) + "&9/&b" + max + "&9]";
+        try {
+            iterationList.put(id, iterationList.get(id) + (long) 1);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return returnString;
     }
 
     private void log(String text) {
