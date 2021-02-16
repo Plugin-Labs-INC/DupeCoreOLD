@@ -4,6 +4,8 @@ import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.Plugin;
 
+import java.util.List;
+
 public class ConfigurationManager {
 
     public Plugin plugin;
@@ -21,6 +23,10 @@ public class ConfigurationManager {
     public void setConfigValue(String setting, Object value) {
         config.set(setting, value);
         saveConfig();
+    }
+
+    public List getConfigList(String list) {
+        return config.getList(list);
     }
 
     public void saveConfig() {
