@@ -2,11 +2,19 @@ name: DupeCore
 version: ${project.version}
 main: reportcards.dupecore.DupeCore
 api-version: 1.16
+website: https://github.com/ReportCardsMC/DupeCore
 prefix: DupeCore
 authors: [ ReportCards, Reassembly ]
 description: Duplicate your items!
 commands:
   dupe:
     description: Duplicate your held item!
+    usage: /dupe
   toggleitems:
     description: Toggle the random items!
+    usage: /toggleitems
+    aliases: [ti, titems, togglei]
+  dupecore:
+    description: The main DupeCore command
+    usage: /dupecore [reload]
+    aliases: dcore

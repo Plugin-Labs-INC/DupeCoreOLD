@@ -5,6 +5,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import reportcards.dupecore.Commands.CommandDupe;
+import reportcards.dupecore.Commands.CommandDupeCore;
 import reportcards.dupecore.Commands.CommandToggleRandomItems;
 import reportcards.dupecore.Config.ConfigurationManager;
 import reportcards.dupecore.Listeners.PlayerInteractListener;
@@ -41,6 +42,7 @@ public final class DupeCore extends JavaPlugin {
         log(iteration("Startup", max) + " &eInitalizing commands");
         this.getCommand("dupe").setExecutor(new CommandDupe(this, configurationManager));
         this.getCommand("toggleitems").setExecutor(new CommandToggleRandomItems(this, toggleManager, configurationManager));
+        this.getCommand("dupecore").setExecutor(new CommandDupeCore(this, configurationManager));
 
         //Register events
         log(iteration("Startup", max) + " &eRegistering events");
