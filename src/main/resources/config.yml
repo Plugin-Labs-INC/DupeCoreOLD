@@ -1,0 +1,16 @@
+
+# Main Plugin Configuration
+pluginPrefix: "&9[&bDupeCore&9]" # Prefix behind plugin messages
+
+# Dupe Configuration
+dupeMessage: "The item you were holding was duplicated!" # The message when someone duplicates an item
+dupeNoItemMessage: "You're not holding an item to duplicate" # Message when someone tries to duplicate air
+blockedDupeItems: # Items that are blocked from being duplicated, use material names from (https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html)
+  BEDROCK: true # True if item is blocked, no need to include an item if it's not being blocked.
+  TNT: true
+
+# Random Item Generation
+doRandomItems: true # Enable players receiving random items
+randomItemInterval: 10 # Time between each random item (In seconds)
+blockedRandomItems: # Items that are blocked from being duplicated, use material names from (https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html)
+  BEDROCK: true
