@@ -36,9 +36,9 @@ public final class DupeCore extends JavaPlugin {
 
     private String iteration(String id, long max) {
         if (!iterationList.containsKey(id)) iterationList.put(id, (long) 1);
-        String returnString = "&7[&f" + iterationList.get(id) + "&7/&f" + max + "&7]";
+        String returnString = "&9[&b" + iterationList.get(id) + "&9/&b" + max + "&9]";
         try {
-            iterationList.put(id, iterationList.get("id") + (long) 1);
+            iterationList.put(id, iterationList.get(id) + (long) 1);
         } catch (Exception e) {
             e.printStackTrace();
         }
