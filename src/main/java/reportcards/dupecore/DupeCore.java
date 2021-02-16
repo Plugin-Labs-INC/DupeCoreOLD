@@ -5,6 +5,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 import reportcards.dupecore.Commands.CommandDupe;
 import reportcards.dupecore.Config.ConfigurationManager;
+import reportcards.dupecore.Listeners.PlayerInteractListener;
 
 import java.util.HashMap;
 
@@ -24,6 +25,7 @@ public final class DupeCore extends JavaPlugin {
         //Initialize commands
         log(iteration("Startup", max) + " &eInitalizing commands");
         this.getCommand("dupe").setExecutor(new CommandDupe(this, configurationManager));
+        this.getServer().getPluginManager().registerEvents(new PlayerInteractListener(this, configurationManager));
 
         //Done
         log(iteration("Startup", max) + " &aPlugin started completely");
