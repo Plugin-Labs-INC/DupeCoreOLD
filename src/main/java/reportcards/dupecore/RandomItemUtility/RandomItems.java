@@ -70,7 +70,7 @@ public class RandomItems {
 
                if (tick % 20 == 0) {
                    if (serverLoopID != id) this.cancel();
-                   Bukkit.broadcastMessage(configurationManager.getConfigBoolean("doRandomItems") + " | ");
+//                   Bukkit.broadcastMessage(configurationManager.getConfigBoolean("doRandomItems") + " | ");
                    if (!configurationManager.getConfigBoolean("doRandomItems")) this.cancel();
                }
                if (tick % 3 == 0) {
