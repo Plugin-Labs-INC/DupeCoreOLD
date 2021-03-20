@@ -22,9 +22,11 @@ public final class DupeCore extends JavaPlugin {
     private ConfigurationManager configurationManager;
     private ToggleManager toggleManager;
     private RandomItems randomItems;
+    public static DupeCore instance;
 
     @Override
     public void onEnable() {
+        instance = this;
         int max = 4; // Max for the iteration function on startup
         // Plugin startup logic
         log(iteration("Startup", max) + " &eStarting config manager");
