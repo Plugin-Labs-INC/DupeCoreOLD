@@ -1,6 +1,6 @@
 name: DupeCore
 version: ${project.version}
-main: reportcards.dupecore.DupeCore
+main: com.github.pluginlabs.DupeCore
 api-version: 1.16
 website: https://github.com/ReportCardsMC/DupeCore
 prefix: DupeCore

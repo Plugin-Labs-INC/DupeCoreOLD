@@ -1,18 +1,19 @@
-package reportcards.dupecore;
+package com.github.pluginlabs;
 
+import com.github.pluginlabs.Commands.CommandDupe;
+import com.github.pluginlabs.Commands.CommandDupeCore;
+import com.github.pluginlabs.Commands.CommandToggleRandomItems;
+import com.github.pluginlabs.Config.ConfigurationManager;
+import com.github.pluginlabs.Listeners.PlayerInteractListener;
+import com.github.pluginlabs.RandomItemUtility.RandomItems;
+import com.github.pluginlabs.RandomItemUtility.ToggleManager;
+import com.github.pluginlabs.Utilities.bStatsUtil;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
-import reportcards.dupecore.Commands.CommandDupe;
-import reportcards.dupecore.Commands.CommandDupeCore;
-import reportcards.dupecore.Commands.CommandToggleRandomItems;
-import reportcards.dupecore.Config.ConfigurationManager;
-import reportcards.dupecore.Listeners.PlayerInteractListener;
-import reportcards.dupecore.Listeners.PlayerJoinListener;
-import reportcards.dupecore.Listeners.PlayerLeaveListener;
-import reportcards.dupecore.RandomItemUtility.RandomItems;
-import reportcards.dupecore.RandomItemUtility.ToggleManager;
+import com.github.pluginlabs.Listeners.PlayerJoinListener;
+import com.github.pluginlabs.Listeners.PlayerLeaveListener;
 
 import java.util.HashMap;
 
@@ -23,6 +24,7 @@ public final class DupeCore extends JavaPlugin {
     private ToggleManager toggleManager;
     private RandomItems randomItems;
     public static DupeCore instance;
+    public static bStatsUtil bStatsUtility;
 
     @Override
     public void onEnable() {
@@ -54,6 +56,8 @@ public final class DupeCore extends JavaPlugin {
 
         //Start random item loop
         randomItems.startServerLoop();
+
+        bStatsUtility = new bStatsUtil();
 
         //Done
         log(iteration("Startup", max) + " &aPlugin started completely");

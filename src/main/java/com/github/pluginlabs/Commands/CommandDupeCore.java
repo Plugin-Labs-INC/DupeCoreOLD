@@ -1,12 +1,12 @@
-package reportcards.dupecore.Commands;
+package com.github.pluginlabs.Commands;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.Plugin;
-import reportcards.dupecore.Config.ConfigurationManager;
-import reportcards.dupecore.RandomItemUtility.RandomItems;
+import com.github.pluginlabs.Config.ConfigurationManager;
+import com.github.pluginlabs.RandomItemUtility.RandomItems;
 
 public class CommandDupeCore implements CommandExecutor {
 

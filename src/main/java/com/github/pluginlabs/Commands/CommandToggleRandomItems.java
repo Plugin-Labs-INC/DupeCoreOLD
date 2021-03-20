@@ -1,14 +1,14 @@
-package reportcards.dupecore.Commands;
+package com.github.pluginlabs.Commands;
 
 
+import com.github.pluginlabs.RandomItemUtility.ToggleManager;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
-import reportcards.dupecore.Config.ConfigurationManager;
-import reportcards.dupecore.RandomItemUtility.ToggleManager;
+import com.github.pluginlabs.Config.ConfigurationManager;
 
 public class CommandToggleRandomItems implements CommandExecutor {
 

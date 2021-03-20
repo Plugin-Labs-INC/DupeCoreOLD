@@ -1,23 +1,20 @@
-package reportcards.dupecore.RandomItemUtility;
+package com.github.pluginlabs.RandomItemUtility;
 
+import com.github.pluginlabs.Config.ConfigurationManager;
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.scheduler.BukkitRunnable;
-import reportcards.dupecore.Config.ConfigurationManager;
 
 import java.util.Date;
-import java.util.List;
 import java.util.Map;
 import java.util.Random;
-import java.util.stream.Stream;
 
 public class RandomItems {
 

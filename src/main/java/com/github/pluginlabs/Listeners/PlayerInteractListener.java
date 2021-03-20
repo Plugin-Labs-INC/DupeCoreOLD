@@ -1,15 +1,13 @@
-package reportcards.dupecore.Listeners;
+package com.github.pluginlabs.Listeners;
 
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
-import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEvent;
-import org.bukkit.material.SpawnEgg;
 import org.bukkit.plugin.Plugin;
-import reportcards.dupecore.Config.ConfigurationManager;
+import com.github.pluginlabs.Config.ConfigurationManager;
 
 public class PlayerInteractListener implements Listener {
 

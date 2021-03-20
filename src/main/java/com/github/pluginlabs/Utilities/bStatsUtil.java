@@ -1,6 +1,6 @@
-package reportcards.dupecore.Utilities;
+package com.github.pluginlabs.Utilities;
 import org.bstats.bukkit.Metrics;
-import reportcards.dupecore.DupeCore;
+import com.github.pluginlabs.DupeCore;
 
 public class bStatsUtil {
     private static Metrics metrics;

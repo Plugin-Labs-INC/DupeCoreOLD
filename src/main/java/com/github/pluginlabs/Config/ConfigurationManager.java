@@ -1,4 +1,4 @@
-package reportcards.dupecore.Config;
+package com.github.pluginlabs.Config;
 
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;

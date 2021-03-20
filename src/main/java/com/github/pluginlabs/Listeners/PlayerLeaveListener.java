@@ -1,12 +1,11 @@
-package reportcards.dupecore.Listeners;
+package com.github.pluginlabs.Listeners;
 
+import com.github.pluginlabs.RandomItemUtility.ToggleManager;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.plugin.Plugin;
-import reportcards.dupecore.RandomItemUtility.ToggleManager;
 
 public class PlayerLeaveListener implements Listener {
 

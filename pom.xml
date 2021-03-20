@@ -37,7 +37,7 @@
                     <relocation>
                         <pattern>org.bstats</pattern>
                         <!-- Replace this with your package! -->
-                        <shadedPattern>reportcards.dupecore.Utilities</shadedPattern>
+                        <shadedPattern>com.github.pluginlabs.Utilities</shadedPattern>
                     </relocation>
                 </relocations>
             </configuration>

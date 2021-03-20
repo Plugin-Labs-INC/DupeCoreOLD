@@ -1,4 +1,4 @@
-package reportcards.dupecore.RandomItemUtility;
+package com.github.pluginlabs.RandomItemUtility;
 
 
 import org.bukkit.Bukkit;

@@ -1,4 +1,4 @@
-package reportcards.dupecore.Commands;
+package com.github.pluginlabs.Commands;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -8,7 +8,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.Plugin;
-import reportcards.dupecore.Config.ConfigurationManager;
+import com.github.pluginlabs.Config.ConfigurationManager;
 
 public class CommandDupe implements CommandExecutor {
 
