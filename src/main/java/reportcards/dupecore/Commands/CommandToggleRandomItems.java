@@ -25,16 +25,22 @@ public class CommandToggleRandomItems implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
         Player player = (Player) commandSender;
-        if (toggleManager.getToggleSetting(player)) {
-            toggleManager.setToggleSetting(player, false);
-            player.sendMessage(ChatColor.translateAlternateColorCodes('&', configurationManager.getConfigString("pluginPrefix") + " &r" + configurationManager.getConfigString("toggleRandomItemOff")));
-            return true;
+        if (configurationManager.getConfigBoolean("toggleCommand")) {
+            if (toggleManager.getToggleSetting(player)) {
+                toggleManager.setToggleSetting(player, false);
+                player.sendMessage(ChatColor.translateAlternateColorCodes('&', configurationManager.getConfigString("pluginPrefix") + " &r" + configurationManager.getConfigString("toggleRandomItemOff")));
+                return true;
 
-        } else if (!toggleManager.getToggleSetting(player)) {
-            toggleManager.setToggleSetting(player, true);
-            player.sendMessage(ChatColor.translateAlternateColorCodes('&', configurationManager.getConfigString("pluginPrefix") + " &r" + configurationManager.getConfigString("toggleRandomItemOn")));
+            } else if (!toggleManager.getToggleSetting(player)) {
+                toggleManager.setToggleSetting(player, true);
+                player.sendMessage(ChatColor.translateAlternateColorCodes('&', configurationManager.getConfigString("pluginPrefix") + " &r" + configurationManager.getConfigString("toggleRandomItemOn")));
+                return true;
+            }
+            return false;
+
+        } else {
+            player.sendMessage(ChatColor.translateAlternateColorCodes('&', configurationManager.getConfigString("pluginPrefix") + " &3This command has been disabled by an administrator"));
             return true;
         }
-        return false;
     }
 }

@@ -13,7 +13,7 @@ commands:
   toggleitems:
     description: Toggle the random items!
     usage: /toggleitems
-    aliases: [ti, titems, togglei]
+    aliases: [ti, titems, togglei, toggle]
   dupecore:
     description: The main DupeCore command
     usage: /dupecore [reload]

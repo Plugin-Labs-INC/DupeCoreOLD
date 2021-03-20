@@ -22,6 +22,8 @@ blockedDupeItems:
 
 # Enable players receiving random items
 doRandomItems: true
+# Enable /toggleitems
+toggleCommand: true
 # Time between each random item (In seconds)
 randomItemInterval: 10
 # Whether or not to give everybody the same random item each time. (Random each activation, but everyone gets the same item)
