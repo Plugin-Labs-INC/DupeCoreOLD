@@ -65,10 +65,9 @@ public final class DupeCore extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        int max = 3; // Max for the iteration function on startup
+        int max = 1; // Max for the iteration function on startup
         // Plugin shutdown logic
-        log(iteration("stop", max) + " &aPlugin started completely");
-        log(iteration("Startup", max) + " &aPlugin started completely");
+        log(iteration("stop", max) + " &aPlugin stopped completely");
     }
 
     private String iteration(String id, long max) {

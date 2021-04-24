@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>ReportCards</groupId>
+    <groupId>com.github.pluginlabs</groupId>
     <artifactId>DupeCore</artifactId>
     <version>1.1</version>
     <packaging>jar</packaging>
@@ -21,35 +21,26 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.1.0</version>
                 <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
+                    <relocations>
+                        <relocation>
+                            <pattern>org.bstats</pattern>
+                            <!-- Replace this with your package! -->
+                            <shadedPattern>com.github.pluginlabs.Utilities</shadedPattern>
+                        </relocation>
+                    </relocations>
                 </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
-            <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-shade-plugin</artifactId>
-            <version>3.1.0</version>
-            <configuration>
-                <relocations>
-                    <relocation>
-                        <pattern>org.bstats</pattern>
-                        <!-- Replace this with your package! -->
-                        <shadedPattern>com.github.pluginlabs.Utilities</shadedPattern>
-                    </relocation>
-                </relocations>
-            </configuration>
-            <executions>
-                <execution>
-                    <phase>package</phase>
-                    <goals>
-                        <goal>shade</goal>
-                    </goals>
-                </execution>
-            </executions>
-        </plugin>
         </plugins>
         <resources>
             <resource>
